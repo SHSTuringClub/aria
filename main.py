@@ -89,7 +89,7 @@ for node in data:
 
 # Get new data
 timestamp_threshold = data[0]['timestamp'] if data else 0
-print('Getting data from bjnews(新京报)......')
+print('Getting data from bjnews......')
 data.extend(sites.bjnews.get(timestamp_thr=timestamp_threshold))
 
 # More sites to do
