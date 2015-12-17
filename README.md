@@ -8,9 +8,7 @@ It is part of the EdgeScreen Project.
 ##Requirements
 Python 3 (Development is conducted on Python 3.5)
 
-httplib2
-
-urllib
+httplib2 (Simply `pip install httplib2` should do)
 
 ##Copyright & License
 Copyright 2015 Shanghai High School Turing Club
