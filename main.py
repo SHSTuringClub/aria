@@ -1,6 +1,22 @@
 #! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+#    Aria - A simple script for automatically grabbing news from the Internet.
+#    Copyright (C) 2015  Genesis Di
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 import os
 import json
 import sys
@@ -29,12 +45,12 @@ else:
     try:
         fp = open('config.json', 'r')
         config = json.loads(fp.read())
-        assert(config['version'] == VERSION)
+        assert (config['version'] == VERSION)
         if config['dataPath']:
-            assert(os.path.exists(config['dataPath']))
+            assert (os.path.exists(config['dataPath']))
             useDataPath = True
         else:
-            assert(os.path.exists(config['dataDir'] + os.sep + 'data.json'))
+            assert (os.path.exists(config['dataDir'] + os.sep + 'data.json'))
             useDataPath = False
         fp.close()
     except Exception as e:
@@ -43,7 +59,7 @@ else:
         sys.exit(1)
 
 # Load data
-try:                
+try:
     dataPath = config['dataPath'] if useDataPath else config['dataDir'] + os.sep + 'data.json'
     if os.path.exists(dataPath):
         data_fp = codecs.open(dataPath, 'r', 'utf-8')
