@@ -5,6 +5,12 @@ __pycache__/
 # C extensions
 *.so
 
+# User-specific files
+pic/
+config.json
+data.json
+.idea/
+
 # Distribution / packaging
 .Python
 env/
