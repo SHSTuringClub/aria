@@ -48,7 +48,7 @@ def get(timestamp_thr=0):
                 pic_path = 'pic' + os.sep + str(hash(str(tmp))) + '.jpg'
                 # Makes sure that no pictures are downloaded with the same file name.
                 urllib.request.urlretrieve(i['hot_pic'],pic_path)
-                tmp['pic'] = os.path.abspath(pic_path)
+                tmp['pic'] = pic_path
                 tmp['pic_src'] = i['hot_pic']
                 data.append(tmp)
     except Exception as e:

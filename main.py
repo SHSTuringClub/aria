@@ -75,7 +75,7 @@ except Exception as e:
 
 # Check if pictures exist
 for node in data:
-    if not os.path.exists(node['pic_path']):
+    if not os.path.exists(node['pic']):
         print(r'Warning!! Found news with title "' + node['title'] +
               r'" has a picture not found. Trying to redownload......')
         try:
